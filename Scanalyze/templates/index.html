@@ -1,0 +1,46 @@
+{% extends "layout.html" %}{% block title %} Home {% endblock %} {% block main %}
+<main class="container py-5 text-center">
+
+    <div class="pagetitle">
+        Dashboard
+        <!-- creates particles for dynamic background -->
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Patient Name</th>
+                <th class="text-start">MRI Modality</th>
+                <th class="text-start">Date</th>
+                <th class="text-start">File</th>
+            </tr>
+        </thead>
+       <tbody>
+        {% for scan in scans %}
+                <tr>
+                    <td>{{ scan.patientname }}</td>
+                    <td>{{ scan.modality }}</td>
+                    <td>{{ scan.date }}</td>
+                    <td>
+                        <img src="/static/images/input/{{ scan.file }}" alt="MRI Scan" height=128 width=96/>
+                        <a href="/static/images/input/{{ scan.file }}" download>Download {{ scan.file }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+        </main>
+{% endblock %}

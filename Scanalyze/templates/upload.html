@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="pagetitle">
+    Upload File
+    <!-- creates particles for dynamic background -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<form method="post" action="/upload" enctype="multipart/form-data">
+
+    <!-- Text entry form -->
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="patient-name" placeholder="Enter patient name" type="text">
+    </div>
+
+    <!-- file upload -->
+    <dl>
+        <p>
+            <input type="file" name="file" class="file-upload-btn" autocomplete="off" required>
+        </p>
+    </dl>
+
+    <!-- Text entry form -->
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="modality" placeholder="MRI Modality" type="text">
+    </div>
+
+    <p>
+        <input class="subbut" type="submit" value="Submit">
+    </p>
+
+</form>
+{% endblock %}

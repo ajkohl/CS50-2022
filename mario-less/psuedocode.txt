@@ -1,0 +1,5 @@
+Ask for number between 1 and 8
+If user input >0 and <9, assign user input to variable: height
+else, return to step 1
+Iteration i from 1 through the value of height:
+    print i * #'s and "\n"

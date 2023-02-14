@@ -1,0 +1,25 @@
+:root {
+    --blue: #1EA0F3;
+    --official: #D6D9DB;
+}
+
+.check{
+    border-radius: calc(50px * 0.5);
+    height: 50px;
+    width: 50px;
+}
+
+.check-blue {
+    background-color: var(--blue);
+}
+
+.check-official {
+    background-color: var(--official);
+}
+
+.check i {
+    color: white;
+    font-size: calc(50px * 0.5);
+}
+
+

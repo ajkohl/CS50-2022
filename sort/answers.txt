@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: On a pre sorted file, sort 1 was able to complete its process faster than sort 3, implying that sort 1 was bubble sort as its run time depends on the amount of iterations needed before a list is sorted.
+
+sort2 uses: Merge Sort
+
+How do you know?: sort2 takes the least time to sort (less than a second whereas the others take 5+ seconds) a very large reversed list of all three models, reflecting merge sort's high efficiency on large lists due to a lower order of n (log of n instead of exponential increase in running time per every increase in n like the other sort algorithms)
+
+sort3 uses: Selection Sort
+
+How do you know?: sort 3's run time is not altered if the list is pre sorted or random, implying that the algorithm used must be selection sort.

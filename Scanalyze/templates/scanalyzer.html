@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Download Scanalyze
+{% endblock %}
+
+{% block main %}
+    <div class="pagetitle">
+        Want to analyze your scans with the power of AI?
+        <!-- creates particles for dynamic background -->
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div>
+        <img src="/static/images/scanalyzer.png" height=500 width=700/>
+    </div>
+    <br>
+    <div>
+        <a href="/static/models/multisegclassifier.model" download>Download Classifier</a>
+    </div>
+    <br>
+    <h3>
+        Step 1: Download Classifier Model above
+        <br>
+        Step 2: Download <a href="https://imagej.net/software/fiji/downloads">Fiji</a>
+        <br>
+        Step 3: After installing and opening Fiji, open any file you wish to segment as a .tif stack
+        <br>
+        Step 4: Navigate to plugins > segmentation > trainable weka segmentation 3D
+        <br>
+        Step 5: Click "load classifier" and select the Scanalyzer Model
+        <br>
+        Step 6: Create Results!
+    </h3>
+{% endblock %}

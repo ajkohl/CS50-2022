@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="pagetitle">
+    Delete Entry
+
+    <!-- creates particles for dynamic background -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<form action="/delete" method="post">
+
+    <form action="/delete" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="file">
+                <option disabled selected>Filename</option>
+                    {% for scan in scans %}
+                            <tr>
+                                <option value="{{ scan.file }}">{{ scan.file }}</option>
+                            </tr>
+                        {% endfor %}
+            </select>
+            <p> </p>
+    <button class="btn btn-primary" type="submit">Delete File</button>
+</form>
+{% endblock %}

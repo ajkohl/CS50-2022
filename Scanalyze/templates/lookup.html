@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="pagetitle">
+    Look Up Patients
+    <!-- creates particles for dynamic background -->
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+    <!-- Dropdown form -->
+    <form action="/lookup" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="patientname">
+                <option disabled selected>Patient Name</option>
+                    {% for name in patientnames %}
+                            <tr>
+                                <option value="{{ name }}">{{ name }}</option>
+                            </tr>
+                        {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Look up</button>
+    </form>
+{% endblock %}
